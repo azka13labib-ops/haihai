@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>ViralPlayer - Pure CSS</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <header class="header">
+    <div class="logo">
+      <span>Kink Rouf</span>
+    </div>
+    <div class="header-buttons">
+      <button class="btn-small btn-topup">Top Up</button>
+      <button class="btn-small btn-wa">Bot WA</button>
+    </div>
+  </header>
+
+  <div class="container main-content">
+
+    <div class="player-wrapper">
+      <img id="player-thumbnail" src="https://via.placeholder.com/640x360/000000/333333?text=Pilih+Video+di+Bawah"
+        alt="Thumbnail">
+
+      <div class="play-overlay">
+        <div class="play-btn-circle">
+          <i class="fa-solid fa-play"></i>
+        </div>
+      </div>
+
+      <div class="player-info">
+        <span class="badge-live">Now Playing</span>
+        <h1 id="main-title" class="player-title">Silahkan pilih video...</h1>
+      </div>
+    </div>
+
+    <div class="dropdown-wrapper">
+
+      <div class="dropdown-trigger" onclick="toggleDropdown()">
+        <div class="trigger-content">
+          <div class="icon-box">
+            <i class="fa-solid fa-list-ul"></i>
+          </div>
+          <div class="text-group">
+            <span class="label-small">Daftar Putar</span>
+            <span id="trigger-text" class="label-main">Klik untuk memilih video...</span>
+          </div>
+        </div>
+        <i id="arrow-icon" class="fa-solid fa-chevron-down arrow-icon"></i>
+      </div>
+
+      <div id="dropdown-menu" class="dropdown-menu hidden">
+
+        <div class="search-area">
+          <div class="search-box">
+            <i class="fa-solid fa-search"></i>
+            <input type="text" id="search-input" class="search-input" placeholder="Cari judul video..."
+              autocomplete="off">
+          </div>
+        </div>
+
+        <div id="list-container" class="list-container">
+        </div>
+
+        <div class="dropdown-footer">
+          <span id="count-display">Memuat data...</span>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="info-section">
+      <div class="views-count">
+        <i class="fa-regular fa-eye"></i> <span id="views-display">0</span> Views
+      </div>
+      <div class="action-buttons">
+        <button class="icon-btn"><i class="fa-solid fa-share-nodes"></i></button>
+        <button class="icon-btn"><i class="fa-regular fa-heart"></i></button>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
